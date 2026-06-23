@@ -1,0 +1,428 @@
+{
+  "updated": "2026-06-23",
+  "source": "tiktok",
+  "mode": "curated",
+  "count": 28,
+  "influencers": [
+    {
+      "name": "Ploy Sunshine",
+      "handle": "ploysunshine",
+      "url": "https://www.tiktok.com/@ploysunshine",
+      "avatar": null,
+      "categories": [
+        "Beauty",
+        "Skincare"
+      ],
+      "bio": "Glow routines & drugstore dupes ✨",
+      "region": "Bangkok",
+      "followers": 12400000,
+      "likes": 163801841,
+      "verified": true
+    },
+    {
+      "name": "Bank Comedy",
+      "handle": "bankcomedy",
+      "url": "https://www.tiktok.com/@bankcomedy",
+      "avatar": null,
+      "categories": [
+        "Comedy",
+        "Lifestyle"
+      ],
+      "bio": "POV skits about office life 😂",
+      "region": "Bangkok",
+      "followers": 9800000,
+      "likes": 107418184,
+      "verified": true
+    },
+    {
+      "name": "Khun Aroi Eats",
+      "handle": "khunaroi",
+      "url": "https://www.tiktok.com/@khunaroi",
+      "avatar": null,
+      "categories": [
+        "Food",
+        "Mukbang"
+      ],
+      "bio": "Street food crawls every week 🍜",
+      "region": "Bangkok",
+      "followers": 8300000,
+      "likes": 144935829,
+      "verified": true
+    },
+    {
+      "name": "Mali Moves",
+      "handle": "malimoves",
+      "url": "https://www.tiktok.com/@malimoves",
+      "avatar": null,
+      "categories": [
+        "Dance",
+        "Music"
+      ],
+      "bio": "Choreography & trends 💃",
+      "region": "Chiang Mai",
+      "followers": 7100000,
+      "likes": 70585869,
+      "verified": true
+    },
+    {
+      "name": "Tonkla Fit",
+      "handle": "tonklafit",
+      "url": "https://www.tiktok.com/@tonklafit",
+      "avatar": null,
+      "categories": [
+        "Fitness",
+        "Lifestyle"
+      ],
+      "bio": "Home workouts, no equipment 🏋️",
+      "region": "Bangkok",
+      "followers": 6400000,
+      "likes": 102185382,
+      "verified": false
+    },
+    {
+      "name": "Nong Pim Style",
+      "handle": "nongpimstyle",
+      "url": "https://www.tiktok.com/@nongpimstyle",
+      "avatar": null,
+      "categories": [
+        "Fashion",
+        "Lifestyle"
+      ],
+      "bio": "Affordable outfit ideas 👗",
+      "region": "Bangkok",
+      "followers": 5900000,
+      "likes": 81148339,
+      "verified": true
+    },
+    {
+      "name": "Game Gun TH",
+      "handle": "gamegunth",
+      "url": "https://www.tiktok.com/@gamegunth",
+      "avatar": null,
+      "categories": [
+        "Gaming",
+        "Tech"
+      ],
+      "bio": "Mobile esports clips 🎮",
+      "region": "Khon Kaen",
+      "followers": 5200000,
+      "likes": 50720727,
+      "verified": true
+    },
+    {
+      "name": "Auntie Som Cooks",
+      "handle": "auntiesom",
+      "url": "https://www.tiktok.com/@auntiesom",
+      "avatar": null,
+      "categories": [
+        "Food",
+        "Family"
+      ],
+      "bio": "Real Thai home recipes 🥘",
+      "region": "Nonthaburi",
+      "followers": 4700000,
+      "likes": 73304323,
+      "verified": false
+    },
+    {
+      "name": "Fern Travels",
+      "handle": "ferntravels",
+      "url": "https://www.tiktok.com/@ferntravels",
+      "avatar": null,
+      "categories": [
+        "Travel",
+        "Lifestyle"
+      ],
+      "bio": "Hidden beaches of Thailand 🏝️",
+      "region": "Phuket",
+      "followers": 4100000,
+      "likes": 38898518,
+      "verified": true
+    },
+    {
+      "name": "Beam Skincare",
+      "handle": "beamskincare",
+      "url": "https://www.tiktok.com/@beamskincare",
+      "avatar": null,
+      "categories": [
+        "Skincare",
+        "Beauty"
+      ],
+      "bio": "Dermatologist-checked tips 🧴",
+      "region": "Bangkok",
+      "followers": 3800000,
+      "likes": 55622096,
+      "verified": true
+    },
+    {
+      "name": "Title Pranks",
+      "handle": "titlepranks",
+      "url": "https://www.tiktok.com/@titlepranks",
+      "avatar": null,
+      "categories": [
+        "Comedy",
+        "Entertainment"
+      ],
+      "bio": "Harmless street pranks 🤣",
+      "region": "Pattaya",
+      "followers": 3300000,
+      "likes": 32696797,
+      "verified": false
+    },
+    {
+      "name": "Mhok Meow",
+      "handle": "mhokmeow",
+      "url": "https://www.tiktok.com/@mhokmeow",
+      "avatar": null,
+      "categories": [
+        "Pets",
+        "Comedy"
+      ],
+      "bio": "Cat chaos, daily ぬ 🐱",
+      "region": "Chiang Mai",
+      "followers": 2900000,
+      "likes": 29519880,
+      "verified": true
+    },
+    {
+      "name": "Paint by Ja",
+      "handle": "paintbyja",
+      "url": "https://www.tiktok.com/@paintbyja",
+      "avatar": null,
+      "categories": [
+        "DIY",
+        "Crafts"
+      ],
+      "bio": "Resin art & crafts 🎨",
+      "region": "Bangkok",
+      "followers": 2600000,
+      "likes": 37748748,
+      "verified": false
+    },
+    {
+      "name": "Coach Win",
+      "handle": "coachwin",
+      "url": "https://www.tiktok.com/@coachwin",
+      "avatar": null,
+      "categories": [
+        "Education",
+        "Lifestyle"
+      ],
+      "bio": "English in 60 seconds 📚",
+      "region": "Bangkok",
+      "followers": 2300000,
+      "likes": 45422878,
+      "verified": true
+    },
+    {
+      "name": "Pao Music",
+      "handle": "paomusic",
+      "url": "https://www.tiktok.com/@paomusic",
+      "avatar": null,
+      "categories": [
+        "Music",
+        "Entertainment"
+      ],
+      "bio": "Acoustic covers 🎸",
+      "region": "Bangkok",
+      "followers": 2050000,
+      "likes": 21749322,
+      "verified": true
+    },
+    {
+      "name": "Nadia Glam",
+      "handle": "nadiaglam",
+      "url": "https://www.tiktok.com/@nadiaglam",
+      "avatar": null,
+      "categories": [
+        "Beauty",
+        "Fashion"
+      ],
+      "bio": "Bold makeup looks 💄",
+      "region": "Bangkok",
+      "followers": 1850000,
+      "likes": 22018897,
+      "verified": true
+    },
+    {
+      "name": "Boss Reviews",
+      "handle": "bossreviews",
+      "url": "https://www.tiktok.com/@bossreviews",
+      "avatar": null,
+      "categories": [
+        "Tech",
+        "Education"
+      ],
+      "bio": "Gadget reviews in Thai 📱",
+      "region": "Bangkok",
+      "followers": 1600000,
+      "likes": 27450611,
+      "verified": false
+    },
+    {
+      "name": "Yaya Mukbang",
+      "handle": "yayamukbang",
+      "url": "https://www.tiktok.com/@yayamukbang",
+      "avatar": null,
+      "categories": [
+        "Mukbang",
+        "Food"
+      ],
+      "bio": "Spicy eats challenges 🌶️",
+      "region": "Bangkok",
+      "followers": 1420000,
+      "likes": 30274707,
+      "verified": true
+    },
+    {
+      "name": "Run with Kong",
+      "handle": "runwithkong",
+      "url": "https://www.tiktok.com/@runwithkong",
+      "avatar": null,
+      "categories": [
+        "Fitness",
+        "Travel"
+      ],
+      "bio": "Trail running vlogs 🏃",
+      "region": "Chiang Rai",
+      "followers": 1280000,
+      "likes": 21122993,
+      "verified": false
+    },
+    {
+      "name": "Som O ASMR",
+      "handle": "somoasmr",
+      "url": "https://www.tiktok.com/@somoasmr",
+      "avatar": null,
+      "categories": [
+        "ASMR",
+        "Lifestyle"
+      ],
+      "bio": "Tingles & soft sounds 🤫",
+      "region": "Bangkok",
+      "followers": 1120000,
+      "likes": 15855667,
+      "verified": true
+    },
+    {
+      "name": "Little Chef Mint",
+      "handle": "chefmint",
+      "url": "https://www.tiktok.com/@chefmint",
+      "avatar": null,
+      "categories": [
+        "Food",
+        "Family"
+      ],
+      "bio": "Kid-friendly recipes 🧁",
+      "region": "Bangkok",
+      "followers": 980000,
+      "likes": 21257490,
+      "verified": false
+    },
+    {
+      "name": "Tar Dance Crew",
+      "handle": "tardancecrew",
+      "url": "https://www.tiktok.com/@tardancecrew",
+      "avatar": null,
+      "categories": [
+        "Dance",
+        "Music"
+      ],
+      "bio": "Street dance battles 🕺",
+      "region": "Bangkok",
+      "followers": 870000,
+      "likes": 8356850,
+      "verified": true
+    },
+    {
+      "name": "Earn Plants",
+      "handle": "earnplants",
+      "url": "https://www.tiktok.com/@earnplants",
+      "avatar": null,
+      "categories": [
+        "DIY",
+        "Lifestyle"
+      ],
+      "bio": "Houseplant care 🌿",
+      "region": "Nakhon Ratchasima",
+      "followers": 760000,
+      "likes": 15321668,
+      "verified": false
+    },
+    {
+      "name": "Mook Storytime",
+      "handle": "mookstorytime",
+      "url": "https://www.tiktok.com/@mookstorytime",
+      "avatar": null,
+      "categories": [
+        "Entertainment",
+        "Comedy"
+      ],
+      "bio": "Dramatic story reveals 🎭",
+      "region": "Bangkok",
+      "followers": 640000,
+      "likes": 8169549,
+      "verified": true
+    },
+    {
+      "name": "Fit Mama Bee",
+      "handle": "fitmamabee",
+      "url": "https://www.tiktok.com/@fitmamabee",
+      "avatar": null,
+      "categories": [
+        "Fitness",
+        "Family"
+      ],
+      "bio": "Postpartum workouts 👶",
+      "region": "Bangkok",
+      "followers": 560000,
+      "likes": 6090177,
+      "verified": false
+    },
+    {
+      "name": "Gun Street Food",
+      "handle": "gunstreetfood",
+      "url": "https://www.tiktok.com/@gunstreetfood",
+      "avatar": null,
+      "categories": [
+        "Food",
+        "Travel"
+      ],
+      "bio": "Riverside food tours 🛶",
+      "region": "Ayutthaya",
+      "followers": 480000,
+      "likes": 5055023,
+      "verified": true
+    },
+    {
+      "name": "Nice Nails",
+      "handle": "nicenails",
+      "url": "https://www.tiktok.com/@nicenails",
+      "avatar": null,
+      "categories": [
+        "Beauty",
+        "DIY"
+      ],
+      "bio": "Nail art tutorials 💅",
+      "region": "Bangkok",
+      "followers": 410000,
+      "likes": 5334208,
+      "verified": false
+    },
+    {
+      "name": "Prim Skincare Lab",
+      "handle": "primskincarelab",
+      "url": "https://www.tiktok.com/@primskincarelab",
+      "avatar": null,
+      "categories": [
+        "Skincare",
+        "Education"
+      ],
+      "bio": "Ingredient deep-dives 🔬",
+      "region": "Bangkok",
+      "followers": 350000,
+      "likes": 6863374,
+      "verified": true
+    }
+  ]
+}

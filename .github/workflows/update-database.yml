@@ -1,0 +1,42 @@
+name: Weekly database update
+
+# Runs every Monday 02:00 UTC (~09:00 Bangkok). Also runnable on-demand.
+on:
+  schedule:
+    - cron: "0 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Uncomment if your fetch_stats() needs extra packages:
+      # - run: pip install requests
+
+      - name: Refresh creator stats
+        env:
+          PROVIDER_API_KEY: ${{ secrets.PROVIDER_API_KEY }}
+        run: python scripts/update_data.py
+
+      - name: Commit changes
+        run: |
+          git config user.name  "roster-bot"
+          git config user.email "actions@github.com"
+          git add data/influencers.json
+          if git diff --staged --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "chore: weekly data refresh ($(date -u +%Y-%m-%d))"
+            git push
+          fi

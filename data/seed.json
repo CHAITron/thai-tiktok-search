@@ -1,0 +1,313 @@
+{
+  "source": "tiktok",
+  "creators": [
+    {
+      "name": "Ploy Sunshine",
+      "handle": "ploysunshine",
+      "categories": [
+        "Beauty",
+        "Skincare"
+      ],
+      "region": "Bangkok",
+      "bio": "Glow routines & drugstore dupes ✨",
+      "verified": true
+    },
+    {
+      "name": "Bank Comedy",
+      "handle": "bankcomedy",
+      "categories": [
+        "Comedy",
+        "Lifestyle"
+      ],
+      "region": "Bangkok",
+      "bio": "POV skits about office life 😂",
+      "verified": true
+    },
+    {
+      "name": "Khun Aroi Eats",
+      "handle": "khunaroi",
+      "categories": [
+        "Food",
+        "Mukbang"
+      ],
+      "region": "Bangkok",
+      "bio": "Street food crawls every week 🍜",
+      "verified": true
+    },
+    {
+      "name": "Mali Moves",
+      "handle": "malimoves",
+      "categories": [
+        "Dance",
+        "Music"
+      ],
+      "region": "Chiang Mai",
+      "bio": "Choreography & trends 💃",
+      "verified": true
+    },
+    {
+      "name": "Tonkla Fit",
+      "handle": "tonklafit",
+      "categories": [
+        "Fitness",
+        "Lifestyle"
+      ],
+      "region": "Bangkok",
+      "bio": "Home workouts, no equipment 🏋️",
+      "verified": false
+    },
+    {
+      "name": "Nong Pim Style",
+      "handle": "nongpimstyle",
+      "categories": [
+        "Fashion",
+        "Lifestyle"
+      ],
+      "region": "Bangkok",
+      "bio": "Affordable outfit ideas 👗",
+      "verified": true
+    },
+    {
+      "name": "Game Gun TH",
+      "handle": "gamegunth",
+      "categories": [
+        "Gaming",
+        "Tech"
+      ],
+      "region": "Khon Kaen",
+      "bio": "Mobile esports clips 🎮",
+      "verified": true
+    },
+    {
+      "name": "Auntie Som Cooks",
+      "handle": "auntiesom",
+      "categories": [
+        "Food",
+        "Family"
+      ],
+      "region": "Nonthaburi",
+      "bio": "Real Thai home recipes 🥘",
+      "verified": false
+    },
+    {
+      "name": "Fern Travels",
+      "handle": "ferntravels",
+      "categories": [
+        "Travel",
+        "Lifestyle"
+      ],
+      "region": "Phuket",
+      "bio": "Hidden beaches of Thailand 🏝️",
+      "verified": true
+    },
+    {
+      "name": "Beam Skincare",
+      "handle": "beamskincare",
+      "categories": [
+        "Skincare",
+        "Beauty"
+      ],
+      "region": "Bangkok",
+      "bio": "Dermatologist-checked tips 🧴",
+      "verified": true
+    },
+    {
+      "name": "Title Pranks",
+      "handle": "titlepranks",
+      "categories": [
+        "Comedy",
+        "Entertainment"
+      ],
+      "region": "Pattaya",
+      "bio": "Harmless street pranks 🤣",
+      "verified": false
+    },
+    {
+      "name": "Mhok Meow",
+      "handle": "mhokmeow",
+      "categories": [
+        "Pets",
+        "Comedy"
+      ],
+      "region": "Chiang Mai",
+      "bio": "Cat chaos, daily ぬ 🐱",
+      "verified": true
+    },
+    {
+      "name": "Paint by Ja",
+      "handle": "paintbyja",
+      "categories": [
+        "DIY",
+        "Crafts"
+      ],
+      "region": "Bangkok",
+      "bio": "Resin art & crafts 🎨",
+      "verified": false
+    },
+    {
+      "name": "Coach Win",
+      "handle": "coachwin",
+      "categories": [
+        "Education",
+        "Lifestyle"
+      ],
+      "region": "Bangkok",
+      "bio": "English in 60 seconds 📚",
+      "verified": true
+    },
+    {
+      "name": "Pao Music",
+      "handle": "paomusic",
+      "categories": [
+        "Music",
+        "Entertainment"
+      ],
+      "region": "Bangkok",
+      "bio": "Acoustic covers 🎸",
+      "verified": true
+    },
+    {
+      "name": "Nadia Glam",
+      "handle": "nadiaglam",
+      "categories": [
+        "Beauty",
+        "Fashion"
+      ],
+      "region": "Bangkok",
+      "bio": "Bold makeup looks 💄",
+      "verified": true
+    },
+    {
+      "name": "Boss Reviews",
+      "handle": "bossreviews",
+      "categories": [
+        "Tech",
+        "Education"
+      ],
+      "region": "Bangkok",
+      "bio": "Gadget reviews in Thai 📱",
+      "verified": false
+    },
+    {
+      "name": "Yaya Mukbang",
+      "handle": "yayamukbang",
+      "categories": [
+        "Mukbang",
+        "Food"
+      ],
+      "region": "Bangkok",
+      "bio": "Spicy eats challenges 🌶️",
+      "verified": true
+    },
+    {
+      "name": "Run with Kong",
+      "handle": "runwithkong",
+      "categories": [
+        "Fitness",
+        "Travel"
+      ],
+      "region": "Chiang Rai",
+      "bio": "Trail running vlogs 🏃",
+      "verified": false
+    },
+    {
+      "name": "Som O ASMR",
+      "handle": "somoasmr",
+      "categories": [
+        "ASMR",
+        "Lifestyle"
+      ],
+      "region": "Bangkok",
+      "bio": "Tingles & soft sounds 🤫",
+      "verified": true
+    },
+    {
+      "name": "Little Chef Mint",
+      "handle": "chefmint",
+      "categories": [
+        "Food",
+        "Family"
+      ],
+      "region": "Bangkok",
+      "bio": "Kid-friendly recipes 🧁",
+      "verified": false
+    },
+    {
+      "name": "Tar Dance Crew",
+      "handle": "tardancecrew",
+      "categories": [
+        "Dance",
+        "Music"
+      ],
+      "region": "Bangkok",
+      "bio": "Street dance battles 🕺",
+      "verified": true
+    },
+    {
+      "name": "Earn Plants",
+      "handle": "earnplants",
+      "categories": [
+        "DIY",
+        "Lifestyle"
+      ],
+      "region": "Nakhon Ratchasima",
+      "bio": "Houseplant care 🌿",
+      "verified": false
+    },
+    {
+      "name": "Mook Storytime",
+      "handle": "mookstorytime",
+      "categories": [
+        "Entertainment",
+        "Comedy"
+      ],
+      "region": "Bangkok",
+      "bio": "Dramatic story reveals 🎭",
+      "verified": true
+    },
+    {
+      "name": "Fit Mama Bee",
+      "handle": "fitmamabee",
+      "categories": [
+        "Fitness",
+        "Family"
+      ],
+      "region": "Bangkok",
+      "bio": "Postpartum workouts 👶",
+      "verified": false
+    },
+    {
+      "name": "Gun Street Food",
+      "handle": "gunstreetfood",
+      "categories": [
+        "Food",
+        "Travel"
+      ],
+      "region": "Ayutthaya",
+      "bio": "Riverside food tours 🛶",
+      "verified": true
+    },
+    {
+      "name": "Nice Nails",
+      "handle": "nicenails",
+      "categories": [
+        "Beauty",
+        "DIY"
+      ],
+      "region": "Bangkok",
+      "bio": "Nail art tutorials 💅",
+      "verified": false
+    },
+    {
+      "name": "Prim Skincare Lab",
+      "handle": "primskincarelab",
+      "categories": [
+        "Skincare",
+        "Education"
+      ],
+      "region": "Bangkok",
+      "bio": "Ingredient deep-dives 🔬",
+      "verified": true
+    }
+  ]
+}

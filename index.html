@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ROSTER — Thai TikTok Creator Search</title>
+<meta name="description" content="Search Thai TikTok creators by characteristic — beauty, comedy, food, dance and more. Fast, lightweight, updated weekly." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#17101c;
+    --bg-grad:#1d1326;
+    --panel:#1f1726;
+    --row:rgba(255,255,255,.035);
+    --row-hover:rgba(255,255,255,.06);
+    --ink:#f4ecf5;
+    --muted:#a99bb0;
+    --faint:#6f6478;
+    --primary:#ff2e74;
+    --primary-soft:rgba(255,46,116,.14);
+    --gold:#f7b538;
+    --line:rgba(255,255,255,.09);
+    --line-2:rgba(255,255,255,.05);
+    --display:"Bricolage Grotesque",-apple-system,BlinkMacSystemFont,sans-serif;
+    --body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --shadow:0 18px 50px -20px rgba(0,0,0,.7);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:
+      radial-gradient(1100px 620px at 78% -8%, rgba(255,46,116,.16), transparent 60%),
+      radial-gradient(820px 520px at 6% 4%, rgba(247,181,56,.10), transparent 55%),
+      linear-gradient(180deg,var(--bg-grad),var(--bg) 38%);
+    background-attachment:fixed;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  a{color:inherit}
+  .wrap{max-width:920px;margin:0 auto;padding:0 20px}
+
+  /* header */
+  header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);
+    background:linear-gradient(180deg,rgba(23,16,28,.82),rgba(23,16,28,.45));
+    border-bottom:1px solid var(--line-2);}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .mark{font-family:var(--display);font-weight:800;letter-spacing:-.02em;font-size:20px;display:flex;align-items:center;gap:9px}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 4px var(--primary-soft);display:inline-block}
+  .mark small{font-weight:600;color:var(--faint);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-left:2px}
+  .meta{font-size:12px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+  .meta b{color:var(--gold);font-weight:600}
+
+  /* hero */
+  .hero{padding:46px 0 14px}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+  h1{font-family:var(--display);font-weight:700;letter-spacing:-.03em;
+     font-size:clamp(32px,6.4vw,54px);line-height:1.02;margin:0 0 12px}
+  h1 .pink{color:var(--primary)}
+  .sub{color:var(--muted);font-size:16px;max-width:46ch;margin:0}
+
+  /* search */
+  .search{margin-top:26px}
+  .field{position:relative}
+  .field svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--faint)}
+  #q{width:100%;height:60px;border-radius:16px;border:1px solid var(--line);
+     background:rgba(255,255,255,.04);color:var(--ink);font-family:var(--body);
+     font-size:17px;padding:0 56px 0 50px;outline:none;transition:border-color .18s,box-shadow .18s,background .18s}
+  #q::placeholder{color:var(--faint)}
+  #q:focus{border-color:var(--primary);background:rgba(255,255,255,.06);
+     box-shadow:0 0 0 4px var(--primary-soft)}
+  .clear{position:absolute;right:12px;top:50%;transform:translateY(-50%);
+     border:none;background:var(--line);color:var(--muted);width:30px;height:30px;
+     border-radius:9px;cursor:pointer;font-size:15px;line-height:1;display:none;align-items:center;justify-content:center}
+  .clear:hover{background:var(--row-hover);color:var(--ink)}
+  .clear.show{display:flex}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .chip{border:1px solid var(--line);background:transparent;color:var(--muted);
+     font-family:var(--body);font-size:13px;font-weight:500;padding:7px 13px;border-radius:999px;
+     cursor:pointer;transition:all .15s;white-space:nowrap}
+  .chip:hover{color:var(--ink);border-color:var(--muted)}
+  .chip[aria-pressed="true"]{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:600}
+
+  /* controls row */
+  .controls{display:flex;align-items:center;justify-content:space-between;gap:14px;
+     margin:26px 0 8px;padding-bottom:14px;border-bottom:1px solid var(--line-2)}
+  .count{font-size:13px;color:var(--muted)}
+  .count b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+  .sortwrap{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--faint)}
+  select{appearance:none;-webkit-appearance:none;background:var(--panel);color:var(--ink);
+     border:1px solid var(--line);border-radius:10px;font-family:var(--body);font-size:13px;
+     font-weight:500;padding:8px 30px 8px 12px;cursor:pointer;
+     background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23a99bb0' stroke-width='2'><path d='M2 4l4 4 4-4'/></svg>");
+     background-repeat:no-repeat;background-position:right 11px center}
+  select:focus{outline:none;border-color:var(--primary)}
+
+  /* list */
+  .list{display:flex;flex-direction:column;gap:8px;padding-bottom:40px}
+  .row{display:grid;grid-template-columns:34px 52px 1fr auto;align-items:center;gap:16px;
+     padding:14px 16px;border-radius:15px;background:var(--row);border:1px solid var(--line-2);
+     transition:background .15s,border-color .15s,transform .15s;
+     animation:rise .42s cubic-bezier(.2,.7,.2,1) both}
+  .row:hover{background:var(--row-hover);border-color:var(--line)}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .rank{font-family:var(--display);font-weight:700;font-size:18px;color:var(--faint);
+     text-align:center;font-variant-numeric:tabular-nums}
+  .row.top .rank{color:var(--gold)}
+  .row:nth-child(1).top .rank{font-size:21px}
+
+  .avatar{position:relative;width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+     font-family:var(--display);font-weight:700;font-size:18px;color:#fff;overflow:hidden;flex:none;
+     box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+  .avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+
+  .who{min-width:0}
+  .nm{display:flex;align-items:center;gap:7px;font-family:var(--display);font-weight:600;
+     font-size:16px;letter-spacing:-.01em;line-height:1.2}
+  .nm span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .vf{color:var(--primary);flex:none}
+  .handle{font-size:13px;color:var(--muted);margin-top:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .handle .sep{color:var(--faint);margin:0 6px}
+  .tags{margin-top:7px;display:flex;flex-wrap:wrap;gap:5px}
+  .tag{font-size:11px;color:var(--muted);background:rgba(255,255,255,.05);
+     border:1px solid var(--line-2);padding:2px 8px;border-radius:6px;white-space:nowrap}
+  .tag.hit{color:#fff;background:var(--primary-soft);border-color:rgba(255,46,116,.4)}
+
+  .right{display:flex;align-items:center;gap:18px}
+  .stats{text-align:right;font-variant-numeric:tabular-nums}
+  .big{font-family:var(--display);font-weight:700;font-size:16px;line-height:1.1}
+  .lbl{font-size:11px;color:var(--faint);letter-spacing:.04em;margin-top:1px}
+  .likes{font-size:12px;color:var(--muted);margin-top:4px}
+  .likes b{color:var(--gold);font-weight:600}
+
+  .visit{display:inline-flex;align-items:center;gap:6px;text-decoration:none;flex:none;
+     background:var(--primary);color:#fff;font-weight:600;font-size:13px;
+     padding:10px 14px;border-radius:11px;transition:transform .14s,box-shadow .14s,filter .14s}
+  .visit:hover{filter:brightness(1.06);box-shadow:0 8px 22px -8px rgba(255,46,116,.7);transform:translateY(-1px)}
+  .visit:active{transform:translateY(0)}
+
+  /* empty / loading */
+  .state{text-align:center;padding:64px 20px;color:var(--muted)}
+  .state .ic{font-size:34px;margin-bottom:10px}
+  .state h3{font-family:var(--display);color:var(--ink);font-weight:600;margin:0 0 6px;font-size:19px}
+  .state button{background:none;border:none;color:var(--primary);font-weight:600;cursor:pointer;font-family:var(--body);font-size:14px}
+
+  footer{border-top:1px solid var(--line-2);padding:24px 0 40px;color:var(--faint);font-size:12.5px}
+  footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+  footer a:hover{color:var(--ink)}
+  .ftrow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  /* responsive */
+  @media (max-width:660px){
+    .row{grid-template-columns:26px 46px 1fr;grid-template-areas:"rank av who" "rank av stats";row-gap:10px}
+    .rank{grid-area:rank}.avatar{grid-area:av;width:46px;height:46px}.who{grid-area:who}
+    .right{grid-area:stats;justify-content:space-between;width:100%}
+    .tags{display:none}
+    .meta .upd{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){.row{animation:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="mark"><span class="dot"></span>ROSTER<small>TikTok · TH</small></div>
+    <div class="meta">
+      <span class="upd">Updated <b id="updated">—</b> · </span><b id="total">0</b> creators
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Thai creator search</div>
+    <h1>Find the right <span class="pink">TikTok</span> creator<br>by what they do.</h1>
+    <p class="sub">Type a characteristic — a niche, a vibe, a city. Get a ranked list with profile, handle and a direct link to TikTok.</p>
+
+    <div class="search">
+      <div class="field">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="q" type="search" autocomplete="off" placeholder="Try “comedy bangkok”, “skincare”, “mukbang”…" aria-label="Search creators by characteristic" />
+        <button class="clear" id="clear" aria-label="Clear search">✕</button>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Quick category filters"></div>
+    </div>
+  </section>
+
+  <div class="controls">
+    <div class="count"><b id="shown">0</b> <span id="shownlbl">results</span></div>
+    <div class="sortwrap">
+      <label for="sort">Sort by</label>
+      <select id="sort" aria-label="Sort results">
+        <option value="relevance">Relevance</option>
+        <option value="followers">Followers</option>
+        <option value="likes">Likes</option>
+        <option value="engagement">Engagement</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="list" id="list" aria-live="polite"></div>
+</main>
+
+<footer>
+  <div class="wrap ftrow">
+    <span>Data source: public TikTok profiles · refreshed weekly via GitHub Actions.</span>
+    <span><a href="https://github.com/" id="repo" target="_blank" rel="noopener">View on GitHub</a></span>
+  </div>
+</footer>
+
+<script>
+const DATA_URL = "data/influencers.json";
+
+/* ---- minimal embedded fallback so the page works when opened locally (file://) ---- */
+const FALLBACK = {updated:"sample",influencers:[
+  {name:"Ploy Sunshine",handle:"ploysunshine",url:"https://www.tiktok.com/@ploysunshine",categories:["Beauty","Skincare"],bio:"Glow routines",region:"Bangkok",followers:12400000,likes:163000000,verified:true},
+  {name:"Bank Comedy",handle:"bankcomedy",url:"https://www.tiktok.com/@bankcomedy",categories:["Comedy","Lifestyle"],bio:"Office skits",region:"Bangkok",followers:9800000,likes:150000000,verified:true},
+  {name:"Khun Aroi Eats",handle:"khunaroi",url:"https://www.tiktok.com/@khunaroi",categories:["Food","Mukbang"],bio:"Street food",region:"Bangkok",followers:8300000,likes:120000000,verified:true}
+]};
+
+let ALL = [];
+const state = { q:"", cats:new Set(), sort:"relevance" };
+
+const $ = s => document.querySelector(s);
+const listEl=$("#list"), qEl=$("#q"), chipsEl=$("#chips");
+
+/* number format */
+function fmt(n){
+  if(n>=1e9) return (n/1e9).toFixed(n>=1e10?0:1).replace(/\.0$/,"")+"B";
+  if(n>=1e6) return (n/1e6).toFixed(n>=1e7?0:1).replace(/\.0$/,"")+"M";
+  if(n>=1e3) return (n/1e3).toFixed(n>=1e4?0:1).replace(/\.0$/,"")+"K";
+  return ""+n;
+}
+/* deterministic avatar gradient from name */
+function hue(str){let h=0;for(const c of str)h=(h*31+c.charCodeAt(0))%360;return h;}
+function initials(name){return name.split(/\s+/).slice(0,2).map(w=>w[0]||"").join("").toUpperCase();}
+
+/* search scoring */
+function score(inf, terms){
+  if(!terms.length) return 0;
+  let s=0;
+  const name=inf.name.toLowerCase(), handle=inf.handle.toLowerCase();
+  const cats=inf.categories.map(c=>c.toLowerCase());
+  const region=(inf.region||"").toLowerCase();
+  const bio=(inf.bio||"").toLowerCase();
+  for(const t of terms){
+    let hit=false;
+    for(const c of cats){ if(c===t){s+=10;hit=true;} else if(c.includes(t)){s+=6;hit=true;} }
+    if(name.includes(t)){s+=5;hit=true;}
+    if(handle.includes(t)){s+=4;hit=true;}
+    if(region.includes(t)){s+=4;hit=true;}
+    if(bio.includes(t)){s+=2;hit=true;}
+    if(!hit) return -1; // every term must match somewhere (AND search)
+  }
+  return s;
+}
+function engagement(inf){ return inf.followers ? inf.likes/inf.followers : 0; }
+
+function compute(){
+  const terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+  const catList=[...state.cats].map(c=>c.toLowerCase());
+  let rows = ALL.map(inf=>({inf, s:score(inf,terms)}))
+    .filter(r=>{
+      if(terms.length && r.s<0) return false;
+      if(catList.length && !catList.every(c=>r.inf.categories.map(x=>x.toLowerCase()).includes(c))) return false;
+      return true;
+    });
+
+  const by = {
+    followers:(a,b)=>b.inf.followers-a.inf.followers,
+    likes:(a,b)=>b.inf.likes-a.inf.likes,
+    engagement:(a,b)=>engagement(b.inf)-engagement(a.inf),
+    relevance:(a,b)=> (b.s-a.s) || (b.inf.followers-a.inf.followers),
+  };
+  const key = (state.sort==="relevance" && !terms.length) ? "followers" : state.sort;
+  rows.sort(by[key]);
+  return {rows, terms};
+}
+
+function render(){
+  const {rows, terms}=compute();
+  $("#shown").textContent=rows.length;
+  $("#shownlbl").textContent=rows.length===1?"result":"results";
+
+  if(!rows.length){
+    listEl.innerHTML=`<div class="state"><div class="ic">🔍</div>
+      <h3>No creators match that</h3>
+      <p>Try a niche like <b>food</b>, <b>dance</b> or <b>skincare</b> — or
+      <button id="reset">clear filters</button>.</p></div>`;
+    $("#reset").onclick=clearAll;
+    return;
+  }
+
+  const maxEng = Math.max(...rows.map(r=>engagement(r.inf)),1);
+  listEl.innerHTML = rows.map((r,i)=>{
+    const inf=r.inf, top=i<3;
+    const ini=initials(inf.name), h=hue(inf.name);
+    const av = ini + (inf.avatar
+      ? `<img src="${inf.avatar}" alt="" loading="lazy" onerror="this.remove()">`
+      : "");
+    const tags = inf.categories.map(c=>{
+      const hit = terms.includes(c.toLowerCase());
+      return `<span class="tag${hit?" hit":""}">${c}</span>`;
+    }).join("");
+    return `<div class="row${top?" top":""}" style="animation-delay:${Math.min(i,12)*22}ms">
+      <div class="rank">${i+1}</div>
+      <div class="avatar" style="background:linear-gradient(135deg,hsl(${h} 70% 52%),hsl(${(h+38)%360} 75% 46%))">${av}</div>
+      <div class="who">
+        <div class="nm"><span>${inf.name}</span>${inf.verified?'<svg class="vf" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.5 2.3 3.4-.3.9 3.3 3 1.7-1.2 3.2 1.2 3.2-3 1.7-.9 3.3-3.4-.3L12 23l-2.5-2.3-3.4.3-.9-3.3-3-1.7L3.4 12 2.2 8.8l3-1.7.9-3.3 3.4.3z"/><path d="M10.6 14.6l-2.2-2.2-1.2 1.2 3.4 3.4 6-6-1.2-1.2z" fill="#17101c"/></svg>':""}</div>
+        <div class="handle">@${inf.handle}${inf.region?`<span class="sep">·</span>${inf.region}`:""}</div>
+        <div class="tags">${tags}</div>
+      </div>
+      <div class="right">
+        <div class="stats">
+          <div class="big">${fmt(inf.followers)}</div>
+          <div class="lbl">followers</div>
+          <div class="likes"><b>${fmt(inf.likes)}</b> likes</div>
+        </div>
+        <a class="visit" href="${inf.url}" target="_blank" rel="noopener" aria-label="Open ${inf.name} on TikTok">
+          TikTok
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function buildChips(){
+  const set=new Set();
+  ALL.forEach(i=>i.categories.forEach(c=>set.add(c)));
+  const cats=[...set].sort((a,b)=>a.localeCompare(b));
+  chipsEl.innerHTML=cats.map(c=>`<button class="chip" data-cat="${c}" aria-pressed="false">${c}</button>`).join("");
+  chipsEl.querySelectorAll(".chip").forEach(btn=>{
+    btn.onclick=()=>{
+      const c=btn.dataset.cat;
+      if(state.cats.has(c)){state.cats.delete(c);btn.setAttribute("aria-pressed","false");}
+      else{state.cats.add(c);btn.setAttribute("aria-pressed","true");}
+      render();
+    };
+  });
+}
+
+function clearAll(){
+  state.q="";state.cats.clear();qEl.value="";
+  $("#clear").classList.remove("show");
+  chipsEl.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed","false"));
+  render(); qEl.focus();
+}
+
+/* events */
+let t;
+qEl.addEventListener("input",()=>{
+  state.q=qEl.value.trim();
+  $("#clear").classList.toggle("show",!!qEl.value);
+  clearTimeout(t); t=setTimeout(render,80);
+});
+$("#clear").onclick=clearAll;
+$("#sort").onchange=e=>{state.sort=e.target.value;render();};
+
+/* load */
+async function init(){
+  let db;
+  try{
+    const res=await fetch(DATA_URL,{cache:"no-store"});
+    if(!res.ok) throw 0;
+    db=await res.json();
+  }catch(e){ db=FALLBACK; }
+  ALL = db.influencers || db.creators || [];
+  $("#updated").textContent = db.updated || "—";
+  $("#total").textContent = ALL.length;
+  buildChips();
+  render();
+}
+init();
+</script>
+</body>
+</html>
